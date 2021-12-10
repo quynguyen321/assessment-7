@@ -46,17 +46,18 @@ function isUnique(str) {
 
 
 
-  function longestWord(string) {
-      var str = string.split(" ");
-      var longest = 0;
-      var word = null;
-      for (var i = 0; i < str.length; i++) {
-          if (longest < str[i].length) {
-              longest = str[i].length;
-              word = str[i];
-          }
+  function findLongestWordLength(str) {
+    let words = str.split(' ');
+    let maxLength = 0;
+  
+    for (let i = 0; i < words.length; i++) {
+      if (words[i].length > maxLength) {
+        maxLength = words[i].length;
       }
-      return word;
+    }
+    return maxLength;
   }
-console.log(longestWord('hi hello'))
+  
+  
+console.log(findLongestWordLength("my name is quy"));
 
